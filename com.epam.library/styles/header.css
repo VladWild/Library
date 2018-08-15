@@ -1,0 +1,56 @@
+#header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 5%;
+    color: white;
+    font-size: 9pt;
+    background: #2f364a;
+}
+
+#header .help{
+    margin: 16px;
+    color: #6c758f;
+}
+
+#header .circle{
+    width: 4px;
+    height: 4px;
+    background: #1f2635;
+    border-radius: 50%;
+}
+
+#header #user{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #15a4fa;
+    width: 180px;
+    height: 100%;
+    padding-right: 10px;
+}
+
+#header .avatar{
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+}
+
+#header .arrow{
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+}
+
+#header .circle-big{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+}
+

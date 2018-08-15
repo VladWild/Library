@@ -1,0 +1,203 @@
+#left-menu{
+    display: inline-block;
+    float: left;
+    width: 20%;
+    height: 100%;
+    background: #19202e;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*scrollbar*/
+/*-----------------------------------------*/
+#left-menu::-webkit-scrollbar{
+    width: 6px;
+    background-color: white;
+    padding: 2px;
+    margin: 2px;
+}
+
+#left-menu::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #bac3d2;
+}
+
+#left-menu::-webkit-scrollbar-track{
+    width: 10px;
+    background-color: #E7F0FF;
+}
+
+#left-menu::-webkit-scrollbar-thumb:active {
+    background-color: #a1aab9;
+}
+/*-----------------------------------------*/
+
+#left-menu > div{
+    margin-bottom: 5px;
+    border-top: 2px groove #282f41;
+    border-bottom: 2px groove #141824;
+}
+
+#left-menu > div:first-child{
+    border-top: 0;
+}
+
+#left-menu > div:last-child{
+    border-bottom: 0;
+}
+
+/*add-book*/
+
+#left-menu .add-book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    background: #1f2637;
+}
+
+#left-menu .add{
+    background: white;
+    height: 16px;
+    width: 4px;
+    position: relative; left: 6px;
+}
+
+#left-menu .add:after{
+    content: "";
+    height: 4px; width: 16px;
+    background: white;
+    position: absolute; left: -6px; top: 6px;
+}
+
+#left-menu .add-book button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 20px;
+    width: 160px;
+    height: 45px;
+    margin-top: 6px;
+    border: 0 solid gray;
+    border-radius: 5px;
+    background: #f2795a;
+}
+
+#left-menu .add-book button:hover{
+    background: #ff875a;
+    box-shadow: 0 0 15px #F2795A;
+}
+
+#left-menu .add-book button:active{
+    background: #ffbea3;
+    box-shadow: 0 0 0;
+}
+
+#left-menu .add-book span{
+    color: white;
+}
+
+/*list*/
+
+#left-menu .list{
+    width: 100%;
+    height: 40%;
+    background: #1f2637;
+}
+
+#left-menu .section{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 16%;
+    color: #78829d;
+    font-size: 10pt;
+}
+
+#left-menu .section > i{
+    margin-left: 25px;
+    margin-right: 10px;
+}
+
+#left-menu .section:hover{
+    background: #15a4fa;
+    color: white;
+}
+
+/*mark-list*/
+
+#left-menu .mark-list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    background: #1f2637;
+    color: #78829d;
+    font-size: 10pt;
+}
+
+#left-menu ul > li{
+    margin-bottom: 10px;
+}
+
+#left-menu ul li:nth-child(1){
+    color: #e64c66;
+}
+
+#left-menu ul li:nth-child(2){
+    color: #ffab00;
+}
+
+#left-menu ul li:nth-child(3){
+    color: #00bfdd;
+}
+
+#left-menu ul li:nth-child(4){
+    color: #7874cf;
+    margin-bottom: 0;
+}
+
+#left-menu li span {
+    color: #78829d;
+}
+
+/*notice*/
+
+#left-menu .notice{
+    display: inline-block;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background: #1f2637;
+    color: #545d74;
+    font-size: 10pt;
+}
+
+#left-menu .notice > .notification{
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    margin: 33px 16px 33px 22px;
+}
+
+#left-menu .notification i{
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+#left-menu .notification .info{
+    color: #576b82;
+}
+
+#left-menu .description{
+    display: inline-block;
+    justify-content: flex-start;
+}
+
+#left-menu .description > div{
+    margin-bottom: 10px;
+}
+

@@ -1,0 +1,27 @@
+#footer {
+    display: flex;
+    justify-content: flex-end;
+    left: 0;
+    bottom: 0;
+    background: #181e2c;
+    width: 100%;
+    height: 5%;
+    color: white;
+}
+
+#footer .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 100%;
+    background: #1f2637;
+}
+
+#footer .button:hover{
+    background: #15a4fa;
+}
+
+#footer .button:active{
+    background: rgba(21, 164, 250, 0.53);
+}
