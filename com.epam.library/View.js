@@ -7,14 +7,16 @@ function View(model, controller) {
 
     this.init = function () {
         /*отправки наблюдателю подписанных элементов*/
-        this.subscription = function () {
-
-        };
-
-        /*добавление событий элементам*/
-        this.event = function () {
+        function subscription() {
 
         }
+        /*добавление событий элементам*/
+        function event() {
+
+        }
+
+        subscription();
+        event();
     }
 }
 
