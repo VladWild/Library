@@ -1,5 +1,9 @@
 function Model() {
+    /*данные модели*/
     this.books = [];
+
+    /*наблюдатели элементов*/
+    this.onSearcher = new EventEmitter();
 
     this.init = function () {
         /*инициализация массива книг со страницы*/
@@ -30,6 +34,11 @@ function Model() {
 
 /*обработка данных в модели и проход по всем слушателям (изменяющимся элементам на странице) этими данными*/
 Model.prototype = {
-
+    search: function (str) {
+        let books = this.books
+            .filter(book => book.title.indexOf(str) > -1 ||
+            book.author.indexOf(str) > -1);
+        this.onSearcher.notify(books);
+    }
 };
 

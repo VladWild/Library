@@ -11,6 +11,8 @@ function Controller() {
 
 /*реакция на событие после случившегося event'а - передача управления содержимым модели*/
 Controller.prototype = {
-
+    search: function (str) {
+        this.model.search(str);
+    }
 };
 
