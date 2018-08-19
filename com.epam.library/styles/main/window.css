@@ -63,15 +63,28 @@
 }
 
 /*sections searcher*/
+#window #search{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 #window .searcher{
     padding-left: 10px;
+    padding-right: 26px;
     width: 250px;
     height: 25px;
     margin-right: 30px;
     border-radius: 15px;
     border: 1px solid #c7cddb;
 }
+
+#window .searcher + i{
+    position: relative;
+    right: 16%;
+    color: gray;
+}
+
 
 /*books*/
 
@@ -113,7 +126,6 @@
     margin-top: 30px;
     height: 350px;
     width: 200px;
-    /*background: lightgray;*/
 }
 
 #window .book > img{
@@ -126,6 +138,11 @@
 #window .book > .name-book{
     font-size: 11pt;
     margin-bottom: 5px;
+}
+
+#window .author > .name > span,
+#window .book > .name-book > span > span {
+    background: yellow;
 }
 
 #window .book > .author{
