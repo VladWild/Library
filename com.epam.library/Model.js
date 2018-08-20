@@ -4,12 +4,14 @@ function Model() {
 
     /*наблюдатели элементов*/
     this.onSearcher = new EventEmitter();
+    this.onClickStar = new EventEmitter();
 
     this.init = function () {
         /*инициализация массива книг со страницы*/
         function initBooks(that) {
             let bookHtml = document.getElementsByClassName("book");
             for (let i = 0; i < bookHtml.length; i++){
+                let id = bookHtml[i].getAttribute('aria-valuetext');
                 let title = bookHtml[i]
                     .getElementsByClassName('name-book')[0]
                     .getElementsByTagName('span')[0]
@@ -24,7 +26,7 @@ function Model() {
                 let stars = bookHtml[i]
                     .getElementsByClassName('fa fa-star')
                     .length;
-                that.books[i] = new Book(title, author, image, stars);
+                that.books[i] = new Book(id, title, author, image, stars);
             }
         }
 
@@ -39,6 +41,10 @@ Model.prototype = {
             .filter(book => book.title.indexOf(str) > -1 ||
             book.author.indexOf(str) > -1);
         this.onSearcher.notify(books);
+    },
+    updateRating: function (rating, idBook) {
+        this.books[idBook].stars = rating;
+        this.onClickStar.notify(idBook, rating);
     }
 };
 

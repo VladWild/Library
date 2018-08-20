@@ -6,9 +6,9 @@ EventEmitter.prototype = {
     subscribe: function (handler) {
         this.listeners.push(handler);
     },
-    notify: function (data) {
+    notify: function (data, data2) {
         for (let i = 0; i < this.listeners.length; i++){
-            this.listeners[i](data);
+            this.listeners[i](data, data2);
         }
     }
 };
