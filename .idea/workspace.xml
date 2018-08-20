@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53d4b45c-e0f3-4412-aee7-605e69c06119" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/com.epam.library/Controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/Controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.epam.library/EventEmitter.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/EventEmitter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.epam.library/Model.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/Model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.epam.library/Tags.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/Tags.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.epam.library/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.epam.library/elements/Book.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/elements/Book.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.epam.library/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.epam.library/styles/main/window.css" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/styles/main/window.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,8 +20,17 @@
       <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.epam.library/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="1663">
               <caret line="193" column="53" lean-forward="true" selection-start-line="193" selection-start-column="53" selection-end-line="193" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/com.epam.library/View.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="538">
+              <caret line="69" column="48" selection-start-line="69" selection-start-column="48" selection-end-line="69" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -44,8 +47,8 @@
       <file leaf-file-name="Controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.epam.library/Controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="272">
+              <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -53,17 +56,8 @@
       <file leaf-file-name="Model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.epam.library/Model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="View.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/com.epam.library/View.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+            <state relative-caret-position="521">
+              <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -131,9 +125,9 @@
         <option value="$PROJECT_DIR$/com.epam.library/elements/Book.js" />
         <option value="$PROJECT_DIR$/com.epam.library/Controller.js" />
         <option value="$PROJECT_DIR$/com.epam.library/layout.html" />
-        <option value="$PROJECT_DIR$/com.epam.library/Model.js" />
         <option value="$PROJECT_DIR$/com.epam.library/EventEmitter.js" />
         <option value="$PROJECT_DIR$/com.epam.library/Tags.js" />
+        <option value="$PROJECT_DIR$/com.epam.library/Model.js" />
         <option value="$PROJECT_DIR$/com.epam.library/View.js" />
       </list>
     </option>
@@ -239,13 +233,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37835000" />
+    <option name="totallyTimeSpent" value="40809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="963" y="33" width="939" height="1004" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20368364" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19501625" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -364,13 +358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/Model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com.epam.library/init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -380,15 +367,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/com.epam.library/Controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="272">
+          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/layout.html">
+    <entry file="file://$PROJECT_DIR$/com.epam.library/Model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="193" column="53" lean-forward="true" selection-start-line="193" selection-start-column="53" selection-end-line="193" selection-end-column="53" />
+        <state relative-caret-position="521">
+          <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -406,10 +393,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/com.epam.library/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1663">
+          <caret line="193" column="53" lean-forward="true" selection-start-line="193" selection-start-column="53" selection-end-line="193" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/com.epam.library/View.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+        <state relative-caret-position="538">
+          <caret line="69" column="48" selection-start-line="69" selection-start-column="48" selection-end-line="69" selection-end-column="48" />
         </state>
       </provider>
     </entry>

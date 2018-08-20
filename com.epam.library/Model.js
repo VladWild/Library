@@ -40,7 +40,8 @@ Model.prototype = {
         let books = this.books
             .filter(book => book.title.indexOf(str) > -1 ||
             book.author.indexOf(str) > -1);
-        this.onSearcher.notify(books);
+        let indices = books.map(book => book.id);
+        this.onSearcher.notify(books, indices);
     },
     updateRating: function (rating, idBook) {
         this.books[idBook].stars = rating;
