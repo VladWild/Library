@@ -176,8 +176,8 @@
 }
 
 #window .book > .stars li:active{
-    color: #ffc48a;
-    box-shadow: 0 0 0 0;
+    /*color: #ffc48a;
+    box-shadow: 0 0 0 0;*/
 }
 
 /*----------------------------------------------*/

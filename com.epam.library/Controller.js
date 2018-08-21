@@ -22,6 +22,9 @@ Controller.prototype = {
     },
     showCurrentStars: function (id) {
         this.model.currentStarsBookById(id);
+    },
+    showClickStar: function (id, stars) {
+        this.model.showClickStar(id, stars);
     }
 };
 
