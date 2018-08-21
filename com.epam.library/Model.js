@@ -5,6 +5,8 @@ function Model() {
     /*наблюдатели элементов*/
     this.onSearcher = new EventEmitter();
     this.onClickStar = new EventEmitter();
+    this.onHighlightStars = new EventEmitter();
+    this.onShowCurrentStarsBook = new EventEmitter();
 
     this.init = function () {
         var that = this;
@@ -50,6 +52,15 @@ Model.prototype = {
     upDateStars: function (id, stars) {
         this.books[id].stars = stars;
         this.onClickStar.notify(id, stars);
+    },
+    highlightStars: function (id, stars) {
+        this.onHighlightStars.notify(id, stars);
+    },
+    currentStarsBookById: function (id) {
+        let stars = this.books
+            .filter(book => book.id === id)[0]
+            .stars;
+        this.onShowCurrentStarsBook.notify(id, stars);
     }
 };
 

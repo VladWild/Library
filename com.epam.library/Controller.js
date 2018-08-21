@@ -16,6 +16,12 @@ Controller.prototype = {
     },
     upDateStars: function (id, stars) {
         this.model.upDateStars(id, stars);
+    },
+    highlightStars: function (id, stars) {
+        this.model.highlightStars(id, stars);
+    },
+    showCurrentStars: function (id) {
+        this.model.currentStarsBookById(id);
     }
 };
 

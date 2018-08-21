@@ -170,7 +170,7 @@
 
 #window .book > .stars li{
     list-style-type: none;
-    margin-right: 2px;
+    padding-right: 1px;
     color: orange;
     cursor: pointer;
 }
