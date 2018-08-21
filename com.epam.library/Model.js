@@ -3,11 +3,11 @@ function Model() {
     this.books = [];
 
     /*наблюдатели элементов*/
-    this.onSearcher = new EventEmitter();
-    this.onClickStar = new EventEmitter();
-    this.onHighlightStars = new EventEmitter();
-    this.onShowCurrentStarsBook = new EventEmitter();
-    this.onShowClickStar = new EventEmitter();
+    this.onSearcher = new EventEmitter();               /*поиск*/
+    this.onClickStar = new EventEmitter();              /*отпускание клика на звездочке*/
+    this.onHighlightStars = new EventEmitter();         /*держание курсора на звездочках*/
+    this.onShowCurrentStarsBook = new EventEmitter();   /*увод курсора со звездочек*/
+    this.onShowClickStar = new EventEmitter();          /*задержка клика на звездочках*/
 
     this.init = function () {
         var that = this;
@@ -58,7 +58,6 @@ Model.prototype = {
         let currentStars = this.books
             .filter(book => book.id === id)
             .map(book => book.stars)[0];
-        console.log(currentStars);
         this.onHighlightStars.notify(id, stars, currentStars);
     },
     currentStarsBookById: function (id) {

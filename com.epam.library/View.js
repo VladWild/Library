@@ -36,34 +36,30 @@ function View(model, controller) {
                 let target = event.target;
                 if (target.tagName === 'I') {
                     let stars = target.getAttribute('aria-valuetext');
-                    let id = target.parentElement.parentElement
-                        .parentElement.parentElement.getAttribute('aria-valuemax');
+                    let id = that.methods.getIdBookByTarget(target);
                     that.controller.upDateStars(id, stars);
                 }
-            }
+            };
             that.books.onmouseover = function (event) {
                 let target = event.target;
                 if (target.tagName === 'I'){
                     let stars = target.getAttribute('aria-valuetext');
-                    let id = target.parentElement.parentElement
-                        .parentElement.parentElement.getAttribute('aria-valuemax');
+                    let id = that.methods.getIdBookByTarget(target);
                     that.controller.highlightStars(id, stars);
                 }
-            }
+            };
             that.books.onmouseout = function (event) {
                 let target = event.target;
                 if (target.tagName === 'I'){
-                    let id = target.parentElement.parentElement
-                        .parentElement.parentElement.getAttribute('aria-valuemax');
+                    let id = that.methods.getIdBookByTarget(target);
                     that.controller.showCurrentStars(id);
                 }
-            }
+            };
             that.books.onmousedown = function (event) {
                 let target = event.target;
                 if (target.tagName === 'I'){
                     let stars = target.getAttribute('aria-valuetext');
-                    let id = target.parentElement.parentElement
-                        .parentElement.parentElement.getAttribute('aria-valuemax');
+                    let id = that.methods.getIdBookByTarget(target);
                     that.controller.showClickStar(id, stars);
                 }
             }
@@ -88,7 +84,7 @@ View.prototype = {
                     '<span>' + this.searcher.value + '</span>'),
                 books[i].image,
                 books[i].stars);
-        };
+        }
         booksHTML.innerHTML = inner;
         let booksClass = booksHTML.getElementsByClassName('book');
         for (let i = 0; i < booksClass.length; i++){
@@ -99,9 +95,7 @@ View.prototype = {
         }
     },
     upDateStars: function (id, stars) {
-        let booksHTML = document.getElementsByClassName('book');
-        let bookHTML = Array.from(booksHTML)
-            .filter(bookHTML => bookHTML.getAttribute('aria-valuemax') === id)[0];
+        let bookHTML = this.methods.getBookHtmlByID(id);
         let starsBook = bookHTML.getElementsByTagName('i');
         for (let i = 0; i < stars; i++){
             starsBook[i].setAttribute('class', 'fa fa-star');
@@ -113,10 +107,7 @@ View.prototype = {
         }
     },
     highlightStars: function (id, stars, currentStars) {
-        console.log('id = ' + id + '; stars = ' + stars + '; currentStars = ' + currentStars + ';');
-        let booksHTML = document.getElementsByClassName('book');
-        let bookHTML = Array.from(booksHTML)
-            .filter(bookHTML => bookHTML.getAttribute('aria-valuemax') === id)[0];
+        let bookHTML = this.methods.getBookHtmlByID(id);
         let starsBook = bookHTML.getElementsByTagName('i');
         for (let i = 0; i < stars; i++){
             starsBook[i].setAttribute('class', 'fa fa-star');
@@ -139,11 +130,23 @@ View.prototype = {
         }
     },
     showClickStar: function (id, stars) {
-        let booksHTML = document.getElementsByClassName('book');
-        let bookHTML = Array.from(booksHTML)
-            .filter(bookHTML => bookHTML.getAttribute('aria-valuemax') === id)[0];
+        let bookHTML = this.methods.getBookHtmlByID(id);
         let starsBook = bookHTML.getElementsByTagName('i');
-        starsBook[stars - 1].setAttribute('style', 'text-shadow:0px 0px 18px rgba(0,0,255,0.9); color: orange');
+        starsBook[stars - 1].setAttribute('style', 'text-shadow:0px 0px 18px rgba(0,0,255,0.9); color: #FF5600');
+    }
+};
+
+/*внутренние методы*/
+View.prototype.methods = {
+    getBookHtmlByID: function (id) {
+        return Array.from(document
+            .getElementsByClassName('book'))
+            .filter(bookHTML => bookHTML.getAttribute('aria-valuemax') === id)[0];
+    },
+    getIdBookByTarget: function (target) {
+        return target.parentElement.parentElement
+            .parentElement.parentElement
+            .getAttribute('aria-valuemax');
     }
 };
 
