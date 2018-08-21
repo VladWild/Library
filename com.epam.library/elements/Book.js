@@ -1,5 +1,6 @@
-function Book(id, title, author, image, stars) {
+function Book(id, position, title, author, image, stars) {
     this.id = id;
+    this.position = position;
     this.title = title;
     this.author = author;
     this.image = image;

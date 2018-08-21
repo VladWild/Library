@@ -14,8 +14,8 @@ Controller.prototype = {
     search: function (str) {
         this.model.search(str);
     },
-    upDateRating: function (currentRating, idBook) {
-        this.model.updateRating(currentRating, idBook);
+    upDateStars: function (id, stars) {
+        this.model.upDateStars(id, stars);
     }
 };
 

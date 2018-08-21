@@ -3,48 +3,50 @@ function View(model, controller) {
     this.controller = controller;
 
     /*элементы*/
-    this.searcher = document.getElementsByClassName('searcher')[0];     //1) поисковой запрос - task1
-    this.stars = [];                                                    //2) рейтинг для книг
-    this.stars = Array.prototype.concat.apply(this.stars, document.getElementsByClassName("fa fa-star"));
-    this.stars = Array.prototype.concat.apply(this.stars, document.getElementsByClassName("fa fa-star-o"));
+    this.searcher = document.getElementById('searcher');         //1) поисковой запрос - task1
+    this.books = document.getElementById('books');               //2) окно с книгами: рейтинг для книг - task2
 
     this.init = function () {
+        let that = this;
         /*отправки наблюдателям подписанных элементов*/
-        function subscription(that) {
-            that.model.onSearcher.subscribe(function (books, indices) {
-                that.showBooks(books, indices);
+        function subscription() {
+            that.model.onSearcher.subscribe(function (books) {
+                that.showBooks(books);
             });
-            that.model.onClickStar.subscribe(function (idBook, rating) {
-                that.upDateStars(idBook, rating);
+            that.model.onClickStar.subscribe(function (id, stars) {
+                that.upDateStars(id, stars);
             })
         }
         /*добавление событий элементам*/
-        function event(that) {
+        function event() {
             that.searcher.onkeyup = function(){
                 that.controller.search(this.value);
             };
-            Array.from(that.stars).forEach(stars =>
-                stars.addEventListener('click', function () {
-                    let number = stars.getAttribute('aria-valuetext');
-                    let idBook = stars.parentElement.parentElement
-                        .parentElement.parentElement.getAttribute('aria-valuetext');
-                    that.controller.upDateRating(number, idBook);
-                })
-            );
+            that.books.onclick = function (event) {
+                let target = event.target;
+                if (target.tagName === 'I') {
+                    let stars = target.getAttribute('aria-valuetext');
+                    let id = target.parentElement.parentElement
+                        .parentElement.parentElement.getAttribute('aria-valuemax');
+                    that.controller.upDateStars(id, stars);
+                }
+            }
         }
 
-        subscription(this);
-        event(this);
+        subscription();
+        event();
     }
 }
 
 /*описание действий, происходящих в результате случившихся событий*/
 View.prototype = {
-    showBooks: function (books, indices) {
+    showBooks: function (books) {
         let booksHTML = document.getElementById("books");
         let inner = '';
         for (let i = 0; i < books.length; i++){
-            inner += Tags.getBook(indices[i], books[i].title.replace(this.searcher.value,
+            inner += Tags.getBook(books[i].id,
+                books[i].position,
+                books[i].title.replace(this.searcher.value,
                     '<span>' + this.searcher.value + '</span>'),
                 books[i].author.replace(this.searcher.value,
                     '<span>' + this.searcher.value + '</span>'),
@@ -58,28 +60,17 @@ View.prototype = {
             for (let j = 0; j < books[i].stars; j++){
                 stars[j].setAttribute('class', 'fa fa-star');
             }
-        };
-
-        this.stars = [];                                                    //2) рейтинг для книг
-        this.stars = Array.prototype.concat.apply(this.stars, document.getElementsByClassName("fa fa-star"));
-        this.stars = Array.prototype.concat.apply(this.stars, document.getElementsByClassName("fa fa-star-o"));
-        Array.from(this.stars).forEach(stars =>
-            stars.addEventListener('click', function () {
-                let number = stars.getAttribute('aria-valuetext');
-                let idBook = stars.parentElement.parentElement
-                    .parentElement.parentElement.getAttribute('aria-valuetext');
-                console.log(this);
-                this.controller.upDateRating(number, idBook);
-            }.bind(this))
-        );
+        }
     },
-    upDateStars: function (idBook, rating) {
-        let book = document.getElementsByClassName('book')[idBook];
-        let starsBook = book.getElementsByTagName('i');
-        for (let i = 0; i < rating; i++){
+    upDateStars: function (id, stars) {
+        let booksHTML = document.getElementsByClassName('book');
+        let bookHTML = Array.from(booksHTML)
+            .filter(bookHTML => bookHTML.getAttribute('aria-valuemax') === id)[0];
+        let starsBook = bookHTML.getElementsByTagName('i');
+        for (let i = 0; i < stars; i++){
             starsBook[i].setAttribute('class', 'fa fa-star');
         }
-        for (let i = rating; i < starsBook.length; i++){
+        for (let i = stars; i < starsBook.length; i++){
             starsBook[i].setAttribute('class', 'fa fa-star-o');
         }
     }

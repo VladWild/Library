@@ -1,6 +1,6 @@
 class Tags {
-    static getBook(id, title, author, image, stars) {
-        return '<div aria-valuetext=' + id + ' class="book">\n' +
+    static getBook(id, position, title, author, image, stars) {
+        return '<div aria-valuemax="' + id + '" aria-valuenow="' + position + '" class="book">\n' +
             '                    <img src=' + image + ' alt="">\n' +
             '                    <div class="name-book">\n' +
             '                        <span>' + title + '</span>\n' +

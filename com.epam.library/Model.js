@@ -7,11 +7,13 @@ function Model() {
     this.onClickStar = new EventEmitter();
 
     this.init = function () {
+        var that = this;
         /*инициализация массива книг со страницы*/
-        function initBooks(that) {
+        function initBooks() {
             let bookHtml = document.getElementsByClassName("book");
             for (let i = 0; i < bookHtml.length; i++){
-                let id = bookHtml[i].getAttribute('aria-valuetext');
+                let id = bookHtml[i].getAttribute('aria-valuemax');
+                let position = bookHtml[i].getAttribute('aria-valuenow');
                 let title = bookHtml[i]
                     .getElementsByClassName('name-book')[0]
                     .getElementsByTagName('span')[0]
@@ -26,11 +28,11 @@ function Model() {
                 let stars = bookHtml[i]
                     .getElementsByClassName('fa fa-star')
                     .length;
-                that.books[i] = new Book(id, title, author, image, stars);
+                that.books[i] = new Book(id, position, title, author, image, stars);
             }
         }
 
-        initBooks(this);
+        initBooks();
     }
 }
 
@@ -40,12 +42,14 @@ Model.prototype = {
         let books = this.books
             .filter(book => book.title.indexOf(str) > -1 ||
             book.author.indexOf(str) > -1);
-        let indices = books.map(book => book.id);
-        this.onSearcher.notify(books, indices);
+        for (let i = 0; i < books.length; i++){
+            books[i].position = i;
+        }
+        this.onSearcher.notify(books);
     },
-    updateRating: function (rating, idBook) {
-        this.books[idBook].stars = rating;
-        this.onClickStar.notify(idBook, rating);
+    upDateStars: function (id, stars) {
+        this.books[id].stars = stars;
+        this.onClickStar.notify(id, stars);
     }
 };
 
