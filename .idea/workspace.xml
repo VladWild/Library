@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53d4b45c-e0f3-4412-aee7-605e69c06119" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.epam.library/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/View.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.epam.library/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.epam.library/styles/main/window.css" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/styles/main/window.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,20 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/com.epam.library/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="32" column="43" lean-forward="true" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+            <state relative-caret-position="425">
+              <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="left-menu.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="left-menu.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+            <state relative-caret-position="221">
+              <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -129,6 +126,8 @@
       <find>sections</find>
       <find>+</find>
       <find>add</find>
+      <find>%</find>
+      <find>height</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,8 +145,8 @@
         <option value="$PROJECT_DIR$/com.epam.library/Controller.js" />
         <option value="$PROJECT_DIR$/com.epam.library/View.js" />
         <option value="$PROJECT_DIR$/com.epam.library/styles/main/window.css" />
-        <option value="$PROJECT_DIR$/com.epam.library/layout.html" />
         <option value="$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css" />
+        <option value="$PROJECT_DIR$/com.epam.library/layout.html" />
       </list>
     </option>
   </component>
@@ -246,7 +245,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65339000" />
+    <option name="totallyTimeSpent" value="68527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -637,13 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com.epam.library/styles/main/window.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -651,17 +643,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/layout.html">
+    <entry file="file://$PROJECT_DIR$/com.epam.library/init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="32" column="43" lean-forward="true" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+        <state relative-caret-position="221">
+          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.epam.library/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
         </state>
       </provider>
     </entry>

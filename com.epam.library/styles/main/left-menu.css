@@ -52,7 +52,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15%;
+    height: 24%;
     background: #1f2637;
 }
 
@@ -67,15 +67,15 @@
     justify-content: center;
     align-items: center;
     padding: 7px 20px;
-    width: 70%;
-    height: 50%;
+    width: 60%;
+    height: 40%;
     margin-top: 6px;
     border: 0 solid gray;
     border-radius: 5px;
     background: #f2795a;
 }
 
-#left-menu .add-book button:hover{
+#left-menu .add-book > button:hover{
     background: #ff875a;
     box-shadow: 0 0 15px #F2795A;
 }
@@ -88,6 +88,35 @@
 #left-menu .add-book span{
     color: white;
     margin-left: 5px;
+}
+
+/*add*/
+
+#left-menu .add{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 10pt;
+}
+
+#left-menu .add > input{
+    width: 80%;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#left-menu .add > span{
+    color: #78829d;
+}
+
+#left-menu .add > .save{
+    width: 40%;
+    height: 30%;
+    font-size: 10pt;
+    color: white;
 }
 
 /*list*/
