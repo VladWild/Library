@@ -56,27 +56,19 @@
     background: #1f2637;
 }
 
-#left-menu .add{
-    background: white;
-    height: 16px;
-    width: 4px;
-    position: relative; left: 6px;
-}
-
-#left-menu .add:after{
-    content: "";
-    height: 4px; width: 16px;
-    background: white;
-    position: absolute; left: -6px; top: 6px;
+#left-menu button > i{
+    color: white;
+    font-size: 15pt;
+    margin-right: 5px;
 }
 
 #left-menu .add-book button{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 7px 20px;
-    width: 160px;
-    height: 45px;
+    width: 70%;
+    height: 50%;
     margin-top: 6px;
     border: 0 solid gray;
     border-radius: 5px;
@@ -95,6 +87,7 @@
 
 #left-menu .add-book span{
     color: white;
+    margin-left: 5px;
 }
 
 /*list*/

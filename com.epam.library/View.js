@@ -28,9 +28,6 @@ function View(model, controller) {
             that.model.onShowClickStar.subscribe(function (id, stars) {
                 that.showClickStar(id, stars);
             });
-            /*that.model.onClickAllBooks.subscribe(function (books) {
-                that.showBooks(books);
-            });*/
             that.model.onClickPopularBooks.subscribe(function (books) {
                 that.showBooks(books);
             });
