@@ -25,6 +25,9 @@ Controller.prototype = {
     },
     showClickStar: function (id, stars) {
         this.model.showClickStar(id, stars);
+    },
+    popular: function (str) {
+        this.model.popular(str);
     }
 };
 

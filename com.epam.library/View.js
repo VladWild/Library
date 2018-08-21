@@ -5,6 +5,8 @@ function View(model, controller) {
     /*элементы*/
     this.searcher = document.getElementById('searcher');         //1) поисковой запрос - task1
     this.books = document.getElementById('books');               //2) окно с книгами: рейтинг для книг - task2
+    this.allBooks = document.getElementById('all-books');        //3) все книги - task3
+    this.popularBooks = document.getElementById('popular');      //3) популярные книги - task3
 
     this.init = function () {
         let that = this;
@@ -25,12 +27,22 @@ function View(model, controller) {
             });
             that.model.onShowClickStar.subscribe(function (id, stars) {
                 that.showClickStar(id, stars);
-            })
+            });
+            /*that.model.onClickAllBooks.subscribe(function (books) {
+                that.showBooks(books);
+            });*/
+            that.model.onClickPopularBooks.subscribe(function (books) {
+                that.showBooks(books);
+            });
         }
         /*добавление событий элементам*/
         function event() {
             that.searcher.onkeyup = function(){
-                that.controller.search(this.value);
+                if (that.allBooks.getAttribute('class') === 'bg shadow') {
+                    that.controller.search(this.value);
+                } else {
+                    that.controller.popular(this.value);
+                }
             };
             that.books.onclick = function (event) {
                 let target = event.target;
@@ -62,6 +74,14 @@ function View(model, controller) {
                     let id = that.methods.getIdBookByTarget(target);
                     that.controller.showClickStar(id, stars);
                 }
+            };
+            that.allBooks.onclick = function(){
+                that.controller.search(that.searcher.value);
+                that.showClickAllBooks();
+            };
+            that.popularBooks.onclick = function () {
+                that.controller.popular(that.searcher.value);
+                that.showClickPopularBooks();
             }
         }
 
@@ -133,6 +153,14 @@ View.prototype = {
         let bookHTML = this.methods.getBookHtmlByID(id);
         let starsBook = bookHTML.getElementsByTagName('i');
         starsBook[stars - 1].setAttribute('style', 'text-shadow:0px 0px 18px rgba(0,0,255,0.9); color: #FF5600');
+    },
+    showClickAllBooks: function () {
+        this.popularBooks.setAttribute('class', 'shadow');
+        this.allBooks.setAttribute('class', 'bg shadow');
+    },
+    showClickPopularBooks: function () {
+        this.popularBooks.setAttribute('class', 'bg shadow');
+        this.allBooks.setAttribute('class', 'shadow');
     }
 };
 
