@@ -48,59 +48,61 @@
 
 /*add-book*/
 
-#left-menu .add-book{
+#left-menu .new-book{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 24%;
+    height: 26%;
     background: #1f2637;
 }
 
-#left-menu button > i{
+#left-menu #add-book > i{
     color: white;
     font-size: 15pt;
     margin-right: 5px;
 }
 
-#left-menu .add-book button{
+#left-menu .new-book > #add-book{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 7px 20px;
-    width: 60%;
-    height: 40%;
+    width: 56%;
+    height: 36%;
     margin-top: 6px;
     border: 0 solid gray;
     border-radius: 5px;
     background: #f2795a;
 }
 
-#left-menu .add-book > button:hover{
+#left-menu .new-book > #add-book:hover{
     background: #ff875a;
     box-shadow: 0 0 15px #F2795A;
 }
 
-#left-menu .add-book button:active{
+#left-menu .new-book > #add-book:active,
+#left-menu .new-book #save-book:active{
     background: #ffbea3;
     box-shadow: 0 0 0;
 }
 
-#left-menu .add-book span{
+#left-menu .new-book span{
     color: white;
     margin-left: 5px;
 }
 
-/*add*/
+/*save-book*/
 
-#left-menu .add{
+#left-menu .save{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-size: 10pt;
+    height: 80%;
 }
 
-#left-menu .add > input{
+#left-menu .save > input{
     width: 80%;
     padding-left: 5px;
     padding-right: 5px;
@@ -108,15 +110,19 @@
     margin-bottom: 1%;
 }
 
-#left-menu .add > span{
+#left-menu .save > span{
     color: #78829d;
 }
 
-#left-menu .add > .save{
-    width: 40%;
-    height: 30%;
+#left-menu .save > #save-book{
+    width: 50%;
+    height: 26%;
     font-size: 10pt;
     color: white;
+    border: 0 solid gray;
+    border-radius: 5px;
+    background: #f2795a;
+    margin-top: 4px;
 }
 
 /*list*/
