@@ -3,13 +3,20 @@ function Model() {
     this.books = [];
 
     /*наблюдатели элементов*/
-    this.onSearcher = new EventEmitter();
+    this.onSearcher = new EventEmitter();               /*поиск*/
+    this.onClickStar = new EventEmitter();              /*отпускание клика на звездочке*/
+    this.onHighlightStars = new EventEmitter();         /*держание курсора на звездочках*/
+    this.onShowCurrentStarsBook = new EventEmitter();   /*увод курсора со звездочек*/
+    this.onShowClickStar = new EventEmitter();          /*задержка клика на звездочках*/
 
     this.init = function () {
+        var that = this;
         /*инициализация массива книг со страницы*/
-        function initBooks(that) {
+        function initBooks() {
             let bookHtml = document.getElementsByClassName("book");
             for (let i = 0; i < bookHtml.length; i++){
+                let id = bookHtml[i].getAttribute('aria-valuemax');
+                let position = bookHtml[i].getAttribute('aria-valuenow');
                 let title = bookHtml[i]
                     .getElementsByClassName('name-book')[0]
                     .getElementsByTagName('span')[0]
@@ -24,11 +31,11 @@ function Model() {
                 let stars = bookHtml[i]
                     .getElementsByClassName('fa fa-star')
                     .length;
-                that.books[i] = new Book(title, author, image, stars);
+                that.books[i] = new Book(id, position, title, author, image, stars);
             }
         }
 
-        initBooks(this);
+        initBooks();
     }
 }
 
@@ -38,7 +45,29 @@ Model.prototype = {
         let books = this.books
             .filter(book => book.title.indexOf(str) > -1 ||
             book.author.indexOf(str) > -1);
+        for (let i = 0; i < books.length; i++){
+            books[i].position = i;
+        }
         this.onSearcher.notify(books);
+    },
+    upDateStars: function (id, stars) {
+        this.books[id].stars = stars;
+        this.onClickStar.notify(id, stars);
+    },
+    highlightStars: function (id, stars) {
+        let currentStars = this.books
+            .filter(book => book.id === id)
+            .map(book => book.stars)[0];
+        this.onHighlightStars.notify(id, stars, currentStars);
+    },
+    currentStarsBookById: function (id) {
+        let stars = this.books
+            .filter(book => book.id === id)[0]
+            .stars;
+        this.onShowCurrentStarsBook.notify(id, stars);
+    },
+    showClickStar: function (id, stars) {
+        this.onShowClickStar.notify(id, stars);
     }
 };
 

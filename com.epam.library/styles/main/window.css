@@ -69,7 +69,7 @@
     align-items: center;
 }
 
-#window .searcher{
+#window #searcher{
     padding-left: 10px;
     padding-right: 26px;
     width: 250px;
@@ -79,7 +79,7 @@
     border: 1px solid #c7cddb;
 }
 
-#window .searcher + i{
+#window #searcher + i{
     position: relative;
     right: 16%;
     color: gray;
@@ -170,18 +170,14 @@
 
 #window .book > .stars li{
     list-style-type: none;
-    margin-right: 2px;
+    padding-right: 1px;
     color: orange;
     cursor: pointer;
 }
 
-#window .book > .stars li:hover {
-    box-shadow: inset 0 0 1px orange;
-}
-
 #window .book > .stars li:active{
-    color: #df7f00;
-    box-shadow: 0 0 0 0;
+    /*color: #ffc48a;
+    box-shadow: 0 0 0 0;*/
 }
 
 /*----------------------------------------------*/
