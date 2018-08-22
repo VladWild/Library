@@ -3,11 +3,14 @@ function View(model, controller) {
     this.controller = controller;
 
     /*элементы*/
-    this.searcher = document.getElementById('searcher');         //1) поисковой запрос - task1
-    this.books = document.getElementById('books');               //2) окно с книгами: рейтинг для книг - task2
-    this.allBooks = document.getElementById('all-books');        //3) все книги - task3
-    this.popularBooks = document.getElementById('popular');      //3) популярные книги - task3
-    this.newBook = document.getElementById('new-book');          //4) добавление новой книги - task4
+    this.searcher = document.getElementById('searcher');            //1) поисковой запрос - task1
+    this.books = document.getElementById('books');                  //2) окно с книгами: рейтинг для книг - task2; модальное окно - task6;
+    this.allBooks = document.getElementById('all-books');           //3) все книги - task3
+    this.popularBooks = document.getElementById('popular');         //3) популярные книги - task3
+    this.newBook = document.getElementById('new-book');             //4) добавление новой книги - task4
+    this.info = document.getElementById('info');                    //6) модальное окно - task6
+    this.bestList = document.getElementById('best-of-list');        //6) Best of List - task6
+    this.classicNovels = document.getElementById('classic-novels'); //6) Classic Novels - task6
 
     this.init = function () {
         let that = this;
@@ -42,6 +45,18 @@ function View(model, controller) {
                 if (that.allBooks.getAttribute('class') === 'bg shadow') {
                     that.showBooks(books);
                 }
+            });
+            that.model.onClickImageBook.subscribe(function (book) {
+                that.showModelWindowWithBook(book);
+            });
+            that.model.onClickButtonSaveTags.subscribe(function () {
+                that.removeModalWindowWithBook();
+            });
+            that.model.onClickBestList.subscribe(function (books) {
+                that.showBooks(books);
+            });
+            that.model.onClickClassicNovels.subscribe(function (books) {
+                that.showBooks(books);
             })
         }
         /*добавление событий элементам*/
@@ -59,6 +74,10 @@ function View(model, controller) {
                     let stars = target.getAttribute('aria-valuetext');
                     let id = that.methods.getIdBookByTarget(target);
                     that.controller.upDateStars(id, stars);
+                }
+                if (target.tagName === 'IMG') {
+                    let id = target.parentElement.getAttribute('aria-valuemax');
+                    that.controller.showModelWindowWithBook(id);
                 }
             };
             that.books.onmouseover = function (event) {
@@ -102,6 +121,22 @@ function View(model, controller) {
                 if (target.id === 'add-book'){
                     that.controller.addBook();
                 }
+            };
+            that.info.onclick = function (event) {
+                let target = event.target;
+                if (target.id === 'ok'){
+                    let id = document.getElementById('form-book')
+                        .getAttribute('aria-valuemax');
+                    let best = document.getElementById('best').checked;
+                    let novel = document.getElementById('novel').checked;
+                    that.controller.setBookTags(id, best, novel);
+                }
+            };
+            that.bestList.onclick = function () {
+                that.controller.best(that.searcher.value);
+            };
+            that.classicNovels.onclick = function () {
+                that.controller.novels(that.searcher.value);
             }
         }
 
@@ -187,6 +222,23 @@ View.prototype = {
     },
     showAddBook: function () {
         this.newBook.innerHTML = Tags.getSaveBook();
+    },
+    showModelWindowWithBook: function (book) {
+        this.info.innerHTML = Tags.getModelWindowByBook(book);
+        let starsBook = this.info.getElementsByTagName('i');
+        for (let i = 0; i < book.stars; i++){
+            starsBook[i].setAttribute('class', 'fa fa-star');
+            starsBook[i].setAttribute('style', '');
+        }
+        for (let i = book.stars; i < starsBook.length; i++){
+            starsBook[i].setAttribute('class', 'fa fa-star-o');
+            starsBook[i].setAttribute('style', '');
+        }
+        if (book.best) document.getElementById('best').checked = true;
+        if (book.novel) document.getElementById('novel').checked = true;
+    },
+    removeModalWindowWithBook: function () {
+        this.info.innerHTML = '';
     }
 };
 

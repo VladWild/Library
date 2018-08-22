@@ -1,0 +1,85 @@
+#form{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#form > #transparency{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(128,128,128, 0.7);
+}
+
+#form > #form-book{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60%;
+    width: 25%;
+    background: lightgray;
+    border: 4px ridge #1f2637;
+    border-radius: 20px;
+    color: #141824;
+}
+
+/*info-book*/
+
+#form-book > .info-book{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 15%;
+}
+
+/*img*/
+
+#form-book > img {
+    height: 40%;
+    width: 40%;
+    border-radius: 7px;
+}
+
+/*name-book*/
+
+#form-book > .info-book > .name-book{
+    font-size: 16pt;
+}
+
+#form-book > .info-book > .stars{
+    color: orange;
+}
+
+#form-book > .info-book > .stars ul{
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+#form-book > .info-book > .stars li{
+    list-style-type: none;
+}
+
+/*button*/
+
+#form-book > #ok{
+    width: 25%;
+    height: 5%;
+    border: 0 solid gray;
+    border-radius: 15px;
+    background: linear-gradient(to bottom, #f85032 0%,#f16f5c 45%,#f6290c 55%,#f02f17 70%,#e73827 100%);
+    color: white;
+}
+
+#form-book > #ok:active{
+    background: linear-gradient(to bottom, #ff3827 0%, #ff3017 45%, #ff290c 55%, #ff7461 70%, #f85032 100%);
+    box-shadow: 0 0 0;
+}

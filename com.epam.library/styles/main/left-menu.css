@@ -82,9 +82,9 @@
 
 #left-menu #new-book > #add-book:active,
 #left-menu #new-book #save-book:active{
-    background: #ffbea3;
-    box-shadow: 0 0 0;
-}
+     background: #ffbea3;
+     box-shadow: 0 0 0;
+ }
 
 #left-menu #new-book span{
     color: white;
@@ -187,6 +187,16 @@
 
 #left-menu li span {
     color: #78829d;
+}
+
+#left-menu li #best-of-list,
+#left-menu li #classic-novels{
+    cursor: pointer;
+}
+
+#left-menu li #best-of-list:active,
+#left-menu li #classic-novels:active{
+    color: #b7c1dc;
 }
 
 /*notice*/

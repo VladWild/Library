@@ -11,6 +11,10 @@ function Model() {
     this.onClickPopularBooks = new EventEmitter();      /*клик на популярные книги*/
     this.onClickAddBook = new EventEmitter();           /*клик на добавление книги*/
     this.onClickSaveBook = new EventEmitter();          /*клик на сохранение книги*/
+    this.onClickImageBook = new EventEmitter();         /*клик на изображение книги*/
+    this.onClickButtonSaveTags = new EventEmitter();    /*сохранение тегов книги*/
+    this.onClickBestList = new EventEmitter();          /*клик на список лучших книг*/
+    this.onClickClassicNovels = new EventEmitter();     /*клик на романы*/
 
     this.init = function () {
         let that = this;
@@ -84,6 +88,25 @@ Model.prototype = {
         let stars = '0';
         this.books.push(new Book(id, position, title, author, image, stars));
         this.onClickSaveBook.notify(this.books);
+    },
+    showModelWindowWithBook: function (id) {
+        this.onClickImageBook.notify(this.books[id]);
+    },
+    saveTagsBook: function (id, best, novel) {
+        this.books[id].setTags(best, novel);
+        this.onClickButtonSaveTags.notify();
+    },
+    best: function (str) {
+        let books = this.filters.search(this.books, str);
+        let bestBooks = this.filters.best(books);
+        this.methods.changePosition(bestBooks);
+        this.onClickBestList.notify(bestBooks);
+    },
+    novels: function (str) {
+        let books = this.filters.search(this.books, str);
+        let novelBooks = this.filters.novels(books);
+        this.methods.changePosition(novelBooks);
+        this.onClickClassicNovels.notify(novelBooks);
     }
 };
 
@@ -95,6 +118,12 @@ Model.prototype.filters = {
     },
     popular: function (arr) {
         return arr.filter(book => book.stars == 5);
+    },
+    best: function (arr) {
+        return arr.filter(book => book.best);
+    },
+    novels: function (arr) {
+        return arr.filter(book => book.novel);
     }
 };
 
