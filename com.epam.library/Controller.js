@@ -40,6 +40,12 @@ Controller.prototype = {
     },
     setBookTags: function (id, best, novel) {
         this.model.saveTagsBook(id, best, novel);
+    },
+    best: function (str) {
+        this.model.best(str);
+    },
+    novels: function (str) {
+        this.model.novels(str);
     }
 };
 

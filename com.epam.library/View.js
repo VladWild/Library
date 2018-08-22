@@ -52,6 +52,12 @@ function View(model, controller) {
             that.model.onClickButtonSaveTags.subscribe(function () {
                 that.removeModalWindowWithBook();
             });
+            that.model.onClickBestList.subscribe(function (books) {
+                that.showBooks(books);
+            });
+            that.model.onClickClassicNovels.subscribe(function (books) {
+                that.showBooks(books);
+            })
         }
         /*добавление событий элементам*/
         function event() {
@@ -125,6 +131,12 @@ function View(model, controller) {
                     let novel = document.getElementById('novel').checked;
                     that.controller.setBookTags(id, best, novel);
                 }
+            };
+            that.bestList.onclick = function () {
+                that.controller.best(that.searcher.value);
+            };
+            that.classicNovels.onclick = function () {
+                that.controller.novels(that.searcher.value);
             }
         }
 
@@ -222,6 +234,8 @@ View.prototype = {
             starsBook[i].setAttribute('class', 'fa fa-star-o');
             starsBook[i].setAttribute('style', '');
         }
+        if (book.best) document.getElementById('best').checked = true;
+        if (book.novel) document.getElementById('novel').checked = true;
     },
     removeModalWindowWithBook: function () {
         this.info.innerHTML = '';
