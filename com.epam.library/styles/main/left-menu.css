@@ -82,9 +82,9 @@
 
 #left-menu #new-book > #add-book:active,
 #left-menu #new-book #save-book:active{
-    background: #ffbea3;
-    box-shadow: 0 0 0;
-}
+     background: #ffbea3;
+     box-shadow: 0 0 0;
+ }
 
 #left-menu #new-book span{
     color: white;

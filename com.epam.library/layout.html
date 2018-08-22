@@ -9,10 +9,48 @@
     <link rel="stylesheet" href="styles/main/left-menu.css">
     <link rel="stylesheet" href="styles/main/window.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.css">
 </head>
 <body>
 <div id="page">
+    <div id="info">
+        <div id="form">
+            <div id="transparency">
+            </div>
+            <div id="form-book">
+                <img src="resources/books/InexpensiveFamilyMeals.jpg" alt="">
+                <div class="info-book">
+                    <div class="name-book">
+                        <span>Cakes & Bakes</span>
+                    </div>
+                    <div class="author">
+                        <span>Sanjeev Kapoor</span>
+                    </div>
+                    <div class="stars">
+                        <ul>
+                            <li><i class="fa fa-star" aria-valuetext="1" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star" aria-valuetext="2" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star" aria-valuetext="3" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star" aria-valuetext="4" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star-o" aria-valuetext="5" aria-hidden="true"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="checkboxes">
+                    <input type="checkbox" id="best-of-list" name="feature"
+                           value="best" />
+                    <label for="best">Best of list</label>
+                    <input type="checkbox" id="classic-novels" name="feature"
+                           value="novels" />
+                    <label for="novels">Classic novels</label>
+                </div>
+                <button id="ok">
+                    Ok
+                </button>
+            </div>
+        </div>
+    </div>
     <div id="header">
         <label class="help">Help center</label>
         <div class="circle"></div>
@@ -32,13 +70,6 @@
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <span>ADD A BOOK</span>
                 </button>
-                <!--<div class="save">
-                    <span>Title:</span>
-                    <input id="title" type="text">
-                    <span>Author:</span>
-                    <input id="author" type="text">
-                    <button id="save-book">Save</button>
-                </div>-->
             </div>
             <div class="list">
                 <div class="section">
