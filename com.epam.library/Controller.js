@@ -13,6 +13,27 @@ function Controller() {
 Controller.prototype = {
     search: function (str) {
         this.model.search(str);
+    },
+    upDateStars: function (id, stars) {
+        this.model.upDateStars(id, stars);
+    },
+    highlightStars: function (id, stars) {
+        this.model.highlightStars(id, stars);
+    },
+    showCurrentStars: function (id) {
+        this.model.currentStarsBookById(id);
+    },
+    showClickStar: function (id, stars) {
+        this.model.showClickStar(id, stars);
+    },
+    popular: function (str) {
+        this.model.popular(str);
+    },
+    addBook: function () {
+        this.model.addBook();
+    },
+    saveBook: function (title, author) {
+        this.model.saveBook(title, author);
     }
 };
 
