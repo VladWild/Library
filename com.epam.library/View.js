@@ -4,7 +4,7 @@ function View(model, controller) {
 
     /*элементы*/
     this.searcher = document.getElementById('searcher');         //1) поисковой запрос - task1
-    this.books = document.getElementById('books');               //2) окно с книгами: рейтинг для книг - task2
+    this.books = document.getElementById('books');               //2) окно с книгами: рейтинг для книг - task2; модальное окно - task6;
     this.allBooks = document.getElementById('all-books');        //3) все книги - task3
     this.popularBooks = document.getElementById('popular');      //3) популярные книги - task3
     this.newBook = document.getElementById('new-book');          //4) добавление новой книги - task4
@@ -59,6 +59,10 @@ function View(model, controller) {
                     let stars = target.getAttribute('aria-valuetext');
                     let id = that.methods.getIdBookByTarget(target);
                     that.controller.upDateStars(id, stars);
+                }
+                if (target.tagName === 'IMG') {
+                    let id = target.parentElement.getAttribute('aria-valuemax');
+                    console.log(id);
                 }
             };
             that.books.onmouseover = function (event) {

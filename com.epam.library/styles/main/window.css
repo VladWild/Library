@@ -133,6 +133,7 @@
     height: 270px;
     border-radius: 7px;
     margin-bottom: 10pt;
+    cursor: pointer;
 }
 
 #window .book > .name-book{
