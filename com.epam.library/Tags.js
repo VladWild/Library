@@ -20,4 +20,21 @@ class Tags {
             '                    </div>\n' +
             '                </div>';
     }
+
+    static getAddBook(){
+        return '<button id="add-book">\n' +
+                    '<i class="fa fa-plus" aria-hidden="true"></i>\n' +
+                    '<span>ADD A BOOK</span>\n' +
+                '</button>';
+    }
+
+    static getSaveBook(){
+        return '<div class="save">\n' +
+                    '<span>Title:</span>\n' +
+                    '<input id="title" type="text">\n' +
+                    '<span>Author:</span>\n' +
+                    '<input id="author" type="text">\n' +
+                    '<button id="save-book">Save</button>\n' +
+                '</div>'
+    }
 }

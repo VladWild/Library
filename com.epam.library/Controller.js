@@ -28,6 +28,12 @@ Controller.prototype = {
     },
     popular: function (str) {
         this.model.popular(str);
+    },
+    addBook: function () {
+        this.model.addBook();
+    },
+    saveBook: function (title, author) {
+        this.model.saveBook(title, author);
     }
 };
 

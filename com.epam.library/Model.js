@@ -9,6 +9,8 @@ function Model() {
     this.onShowCurrentStarsBook = new EventEmitter();   /*увод курсора со звездочек*/
     this.onShowClickStar = new EventEmitter();          /*задержка клика на звездочках*/
     this.onClickPopularBooks = new EventEmitter();      /*клик на популярные книги*/
+    this.onClickAddBook = new EventEmitter();           /*клик на добавление книги*/
+    this.onClickSaveBook = new EventEmitter();          /*клик на сохранение книги*/
 
     this.init = function () {
         let that = this;
@@ -71,6 +73,17 @@ Model.prototype = {
         let popularBooks = this.filters.popular(books);
         this.methods.changePosition(popularBooks);
         this.onClickPopularBooks.notify(popularBooks);
+    },
+    addBook: function () {
+        this.onClickAddBook.notify();
+    },
+    saveBook: function (title, author) {
+        let id = String(this.books.length);
+        let position = String(this.books.length);
+        let image = 'resources/books/nocover.jpg';
+        let stars = '0';
+        this.books.push(new Book(id, position, title, author, image, stars));
+        this.onClickSaveBook.notify();
     }
 };
 

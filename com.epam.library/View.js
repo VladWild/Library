@@ -7,6 +7,7 @@ function View(model, controller) {
     this.books = document.getElementById('books');               //2) окно с книгами: рейтинг для книг - task2
     this.allBooks = document.getElementById('all-books');        //3) все книги - task3
     this.popularBooks = document.getElementById('popular');      //3) популярные книги - task3
+    this.newBook = document.getElementById('new-book');          //4) добавление новой книги - task4
 
     this.init = function () {
         let that = this;
@@ -31,6 +32,17 @@ function View(model, controller) {
             that.model.onClickPopularBooks.subscribe(function (books) {
                 that.showBooks(books);
             });
+            that.model.onClickAddBook.subscribe(function () {
+                that.showAddBook();
+            });
+            that.model.onClickSaveBook.subscribe(function () {
+                that.showSaveBook();
+            });
+            /*that.model.onClickSaveBook.subscribe(function (books) {
+                if (that.allBooks.getAttribute('class') === 'bg shadow') {
+
+                }
+            })*/
         }
         /*добавление событий элементам*/
         function event() {
@@ -79,6 +91,17 @@ function View(model, controller) {
             that.popularBooks.onclick = function () {
                 that.controller.popular(that.searcher.value);
                 that.showClickPopularBooks();
+            };
+            that.newBook.onclick = function (event) {
+                let target = event.target;
+                if (target.id === 'save-book'){
+                    let titleHTML = document.getElementById('title');
+                    let authorHTML = document.getElementById('author');
+                    that.controller.saveBook(titleHTML.value, authorHTML.value);
+                }
+                if (target.id === 'add-book'){
+                    that.controller.addBook();
+                }
             }
         }
 
@@ -158,6 +181,12 @@ View.prototype = {
     showClickPopularBooks: function () {
         this.popularBooks.setAttribute('class', 'bg shadow');
         this.allBooks.setAttribute('class', 'shadow');
+    },
+    showSaveBook: function () {
+        this.newBook.innerHTML = Tags.getAddBook();
+    },
+    showAddBook: function () {
+        this.newBook.innerHTML = Tags.getSaveBook();
     }
 };
 

@@ -48,11 +48,11 @@
 
 /*add-book*/
 
-#left-menu .new-book{
+#left-menu #new-book{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 26%;
+    height: 20%;
     background: #1f2637;
 }
 
@@ -62,7 +62,7 @@
     margin-right: 5px;
 }
 
-#left-menu .new-book > #add-book{
+#left-menu #new-book > #add-book{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,18 +75,18 @@
     background: #f2795a;
 }
 
-#left-menu .new-book > #add-book:hover{
+#left-menu #new-book > #add-book:hover{
     background: #ff875a;
     box-shadow: 0 0 15px #F2795A;
 }
 
-#left-menu .new-book > #add-book:active,
-#left-menu .new-book #save-book:active{
+#left-menu #new-book > #add-book:active,
+#left-menu #new-book #save-book:active{
     background: #ffbea3;
     box-shadow: 0 0 0;
 }
 
-#left-menu .new-book span{
+#left-menu #new-book span{
     color: white;
     margin-left: 5px;
 }
@@ -106,8 +106,6 @@
     width: 80%;
     padding-left: 5px;
     padding-right: 5px;
-    margin-top: 1%;
-    margin-bottom: 1%;
 }
 
 #left-menu .save > span{
