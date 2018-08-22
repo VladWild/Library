@@ -83,7 +83,7 @@ Model.prototype = {
         let image = 'resources/books/nocover.jpg';
         let stars = '0';
         this.books.push(new Book(id, position, title, author, image, stars));
-        this.onClickSaveBook.notify();
+        this.onClickSaveBook.notify(this.books);
     }
 };
 

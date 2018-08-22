@@ -38,11 +38,11 @@ function View(model, controller) {
             that.model.onClickSaveBook.subscribe(function () {
                 that.showSaveBook();
             });
-            /*that.model.onClickSaveBook.subscribe(function (books) {
+            that.model.onClickSaveBook.subscribe(function (books) {
                 if (that.allBooks.getAttribute('class') === 'bg shadow') {
-
+                    that.showBooks(books);
                 }
-            })*/
+            })
         }
         /*добавление событий элементам*/
         function event() {
