@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="53d4b45c-e0f3-4412-aee7-605e69c06119" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.epam.library/Controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/Controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.epam.library/Model.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/Model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.epam.library/Tags.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/Tags.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.epam.library/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.epam.library/elements/Book.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/elements/Book.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.epam.library/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.epam.library/styles/main/window.css" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/styles/main/window.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,29 +26,8 @@
       <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.epam.library/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="158" column="26" lean-forward="true" selection-start-line="158" selection-start-column="26" selection-end-line="158" selection-end-column="26" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tags.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/com.epam.library/Tags.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com.epam.library/styles/form.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+            <state relative-caret-position="561">
+              <caret line="69" column="53" lean-forward="true" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -53,8 +35,8 @@
       <file leaf-file-name="left-menu.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="85" column="23" lean-forward="true" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
+            <state relative-caret-position="577">
+              <caret line="197" column="14" selection-start-line="197" selection-start-column="14" selection-end-line="197" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -62,8 +44,8 @@
       <file leaf-file-name="Controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.epam.library/Controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            <state relative-caret-position="680">
+              <caret line="40" column="15" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -71,25 +53,50 @@
       <file leaf-file-name="Model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.epam.library/Model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+            <state relative-caret-position="1581">
+              <caret line="93" column="44" selection-start-line="93" selection-start-column="44" selection-end-line="93" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="View.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="View.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/com.epam.library/View.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+            <state relative-caret-position="204">
+              <caret line="12" column="95" selection-start-line="12" selection-start-column="95" selection-end-line="12" selection-end-column="95" />
               <folding>
+                <element signature="e#2207#2453#0" />
+                <element signature="e#2505#3011#0" />
                 <element signature="e#2308#2632#0" />
+                <element signature="e#2687#2935#0" />
+                <element signature="e#2991#3314#0" />
                 <element signature="e#3362#3480#0" />
-                <element signature="e#5314#6444#0" />
+                <element signature="e#3534#3657#0" />
+                <element signature="e#3812#4151#0" />
                 <element signature="e#6486#6724#0" />
                 <element signature="e#6761#6885#0" />
                 <element signature="e#6926#7050#0" />
+                <element signature="e#7264#7280#0" />
+                <element signature="e#7311#7327#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tags.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com.epam.library/Tags.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="43" column="41" lean-forward="true" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Book.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com.epam.library/elements/Book.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -103,20 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Book.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com.epam.library/elements/Book.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="55" selection-start-column="14" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="window.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.epam.library/styles/main/window.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="135" column="19" selection-start-line="135" selection-start-column="19" selection-end-line="135" selection-end-column="19" />
+            <state relative-caret-position="390">
+              <caret line="136" column="1" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -145,6 +143,9 @@
       <find>.save</find>
       <find>st</find>
       <find>img</find>
+      <find>starsBook[i].setAttribute('class', 'fa fa-star')</find>
+      <find>info</find>
+      <find>info.onclick</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,16 +156,16 @@
       <list>
         <option value="$PROJECT_DIR$/com.epam.library/controller.js" />
         <option value="$PROJECT_DIR$/com.epam.library/init.js" />
-        <option value="$PROJECT_DIR$/com.epam.library/elements/Book.js" />
         <option value="$PROJECT_DIR$/com.epam.library/EventEmitter.js" />
+        <option value="$PROJECT_DIR$/com.epam.library/styles/main/window.css" />
+        <option value="$PROJECT_DIR$/com.epam.library/styles/form.css" />
+        <option value="$PROJECT_DIR$/com.epam.library/elements/Book.js" />
+        <option value="$PROJECT_DIR$/com.epam.library/Tags.js" />
         <option value="$PROJECT_DIR$/com.epam.library/Controller.js" />
         <option value="$PROJECT_DIR$/com.epam.library/Model.js" />
-        <option value="$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css" />
-        <option value="$PROJECT_DIR$/com.epam.library/styles/form.css" />
         <option value="$PROJECT_DIR$/com.epam.library/layout.html" />
-        <option value="$PROJECT_DIR$/com.epam.library/styles/main/window.css" />
+        <option value="$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css" />
         <option value="$PROJECT_DIR$/com.epam.library/View.js" />
-        <option value="$PROJECT_DIR$/com.epam.library/Tags.js" />
       </list>
     </option>
   </component>
@@ -290,7 +291,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85317000" />
+    <option name="totallyTimeSpent" value="90973000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -333,7 +334,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -419,12 +420,19 @@
         <state relative-caret-position="34">
           <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
           <folding>
+            <element signature="e#2207#2453#0" />
+            <element signature="e#2505#3011#0" />
             <element signature="e#2308#2632#0" />
+            <element signature="e#2687#2935#0" />
+            <element signature="e#2991#3314#0" />
             <element signature="e#3362#3480#0" />
-            <element signature="e#5314#6444#0" />
+            <element signature="e#3534#3657#0" />
+            <element signature="e#3812#4151#0" />
             <element signature="e#6486#6724#0" />
             <element signature="e#6761#6885#0" />
             <element signature="e#6926#7050#0" />
+            <element signature="e#7264#7280#0" />
+            <element signature="e#7311#7327#0" />
           </folding>
         </state>
       </provider>
@@ -626,6 +634,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/com.epam.library/styles/main/window.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="136" column="1" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.epam.library/Controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="15" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.epam.library/styles/form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="197" column="14" selection-start-line="197" selection-start-column="14" selection-end-line="197" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/com.epam.library/EventEmitter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -635,75 +671,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/com.epam.library/elements/Book.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="55" selection-start-column="14" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/styles/form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="85" column="23" lean-forward="true" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/styles/main/window.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="135" column="19" selection-start-line="135" selection-start-column="19" selection-end-line="135" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="158" column="26" lean-forward="true" selection-start-line="158" selection-start-column="26" selection-end-line="158" selection-end-column="26" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/Controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/Model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/View.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-          <folding>
-            <element signature="e#2308#2632#0" />
-            <element signature="e#3362#3480#0" />
-            <element signature="e#5314#6444#0" />
-            <element signature="e#6486#6724#0" />
-            <element signature="e#6761#6885#0" />
-            <element signature="e#6926#7050#0" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com.epam.library/Tags.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        <state relative-caret-position="233">
+          <caret line="43" column="41" lean-forward="true" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.epam.library/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="69" column="53" lean-forward="true" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.epam.library/Model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="93" column="44" selection-start-line="93" selection-start-column="44" selection-end-line="93" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.epam.library/View.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="95" selection-start-line="12" selection-start-column="95" selection-end-line="12" selection-end-column="95" />
+          <folding>
+            <element signature="e#2207#2453#0" />
+            <element signature="e#2505#3011#0" />
+            <element signature="e#2308#2632#0" />
+            <element signature="e#2687#2935#0" />
+            <element signature="e#2991#3314#0" />
+            <element signature="e#3362#3480#0" />
+            <element signature="e#3534#3657#0" />
+            <element signature="e#3812#4151#0" />
+            <element signature="e#6486#6724#0" />
+            <element signature="e#6761#6885#0" />
+            <element signature="e#6926#7050#0" />
+            <element signature="e#7264#7280#0" />
+            <element signature="e#7311#7327#0" />
+          </folding>
         </state>
       </provider>
     </entry>

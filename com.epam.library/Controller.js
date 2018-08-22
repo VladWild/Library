@@ -34,6 +34,12 @@ Controller.prototype = {
     },
     saveBook: function (title, author) {
         this.model.saveBook(title, author);
+    },
+    showModelWindowWithBook: function (id) {
+        this.model.showModelWindowWithBook(id);
+    },
+    setBookTags: function (id, best, novel) {
+        this.model.saveTagsBook(id, best, novel);
     }
 };
 

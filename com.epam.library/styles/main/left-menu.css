@@ -189,6 +189,16 @@
     color: #78829d;
 }
 
+#left-menu li #best-of-list,
+#left-menu li #classic-novels{
+    cursor: pointer;
+}
+
+#left-menu li #best-of-list:active,
+#left-menu li #classic-novels:active{
+    color: #b7c1dc;
+}
+
 /*notice*/
 
 #left-menu .notice{

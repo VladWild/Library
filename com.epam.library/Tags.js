@@ -28,19 +28,27 @@ class Tags {
                 '</button>';
     }
 
-    
+    static getSaveBook(){
+        return '<div class="save">\n' +
+                    '<span>Title:</span>\n' +
+                    '<input id="title" type="text">\n' +
+                    '<span>Author:</span>\n' +
+                    '<input id="author" type="text">\n' +
+                    '<button id="save-book">Save</button>\n' +
+                '</div>';
+    }
 
-    static getModelWindowWithBook(){
+    static getModelWindowByBook(book){
         return '<div id="form">\n' +
                     '<div id="transparency"></div>\n' +
-                    '<div id="form-book">\n' +
-                        '<img src="resources/books/InexpensiveFamilyMeals.jpg" alt="">\n' +
+                    '<div aria-valuemax=' + book.id + ' id="form-book">\n' +
+                        '<img src=' + book.image + ' alt="">\n' +
                         '<div class="info-book">\n' +
                             '<div class="name-book">\n' +
-                                '<span>Cakes & Bakes</span>\n' +
+                                '<span>' + book.title + '</span>\n' +
                             '</div>\n' +
                             '<div class="author">\n' +
-                                '<span>Sanjeev Kapoor</span>\n' +
+                                '<span>' + book.author + '</span>\n' +
                             '</div>\n' +
                             '<div class="stars">\n' +
                                 '<ul>\n' +
@@ -53,9 +61,9 @@ class Tags {
                             '</div>\n' +
                         '</div>\n' +
                         '<div class="checkboxes">\n' +
-                            '<input type="checkbox" id="best-of-list" name="feature" value="best" />\n' +
+                            '<input type="checkbox" id="best" name="feature" value="best" />\n' +
                             '<label for="best">Best of list</label>\n' +
-                            '<input type="checkbox" id="classic-novels" name="feature" value="novels" />\n' +
+                            '<input type="checkbox" id="novel" name="feature" value="novels" />\n' +
                             '<label for="novels">Classic novels</label>\n' +
                         '</div>\n' +
                     '<button id="ok">\n' +
