@@ -77,7 +77,10 @@ Model.prototype = {
         let books = this.filters.search(this.books, str);
         let popularBooks = this.filters.popular(books);
         this.methods.changePosition(popularBooks);
-        this.onClickPopularBooks.notify(popularBooks);
+        this.methods.updateTime(this.notices);
+        this.notices.unshift(new Notice('You click filter popular books',
+            new Date(), 0));
+        this.onClickPopularBooks.notify(popularBooks, this.notices);
     },
     addBook: function () {
         this.onClickAddBook.notify();
@@ -105,13 +108,19 @@ Model.prototype = {
         let books = this.filters.search(this.books, str);
         let bestBooks = this.filters.best(books);
         this.methods.changePosition(bestBooks);
-        this.onClickBestList.notify(bestBooks);
+        this.methods.updateTime(this.notices);
+        this.notices.unshift(new Notice('You click filter best of list books',
+            new Date(), 0));
+        this.onClickBestList.notify(bestBooks, this.notices);
     },
     novels: function (str) {
         let books = this.filters.search(this.books, str);
         let novelBooks = this.filters.novels(books);
         this.methods.changePosition(novelBooks);
-        this.onClickClassicNovels.notify(novelBooks);
+        this.methods.updateTime(this.notices);
+        this.notices.unshift(new Notice('You click classic novels books',
+            new Date(), 0));
+        this.onClickClassicNovels.notify(novelBooks, this.notices);
     }
 };
 

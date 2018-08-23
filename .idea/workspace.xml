@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53d4b45c-e0f3-4412-aee7-605e69c06119" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.epam.library/Model.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/Model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.epam.library/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.epam.library/elements/notices/Notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/elements/Notice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.epam.library/elements/notices/TypeNotice.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/com.epam.library/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/com.epam.library/layout.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,17 +21,8 @@
       <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.epam.library/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="77" column="59" lean-forward="true" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="left-menu.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2460">
-              <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="220" />
+            <state relative-caret-position="238">
+              <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -51,8 +39,8 @@
       <file leaf-file-name="Model.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/com.epam.library/Model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="94" column="62" lean-forward="true" selection-start-line="94" selection-start-column="62" selection-end-line="94" selection-end-column="62" />
+            <state relative-caret-position="356">
+              <caret line="120" column="73" lean-forward="true" selection-start-line="120" selection-start-column="73" selection-end-line="120" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -60,8 +48,8 @@
       <file leaf-file-name="View.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com.epam.library/View.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="251" column="16" selection-start-line="251" selection-start-column="16" selection-end-line="251" selection-end-column="16" />
+            <state relative-caret-position="509">
+              <caret line="61" column="43" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="43" />
               <folding>
                 <element signature="e#2207#2453#0" />
                 <element signature="e#2505#3011#0" />
@@ -156,11 +144,12 @@
       <find>starsBook[i].setAttribute('class', 'fa fa-star')</find>
       <find>info</find>
       <find>info.onclick</find>
-      <find>onClickBestList</find>
       <find>.notice</find>
       <find>notice</find>
       <find>onClickSa</find>
       <find>onClickSaveBook</find>
+      <find>onClickPopularBooks</find>
+      <find>onClickBestList</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -180,8 +169,8 @@
         <option value="$PROJECT_DIR$/com.epam.library/elements/notices/TypeNotice.js" />
         <option value="$PROJECT_DIR$/com.epam.library/elements/notices/Notice.js" />
         <option value="$PROJECT_DIR$/com.epam.library/Tags.js" />
-        <option value="$PROJECT_DIR$/com.epam.library/layout.html" />
         <option value="$PROJECT_DIR$/com.epam.library/elements/Notice.js" />
+        <option value="$PROJECT_DIR$/com.epam.library/layout.html" />
         <option value="$PROJECT_DIR$/com.epam.library/View.js" />
         <option value="$PROJECT_DIR$/com.epam.library/Model.js" />
       </list>
@@ -235,14 +224,14 @@
               <item name="Library" type="b2602c69:ProjectViewProjectNode" />
               <item name="Library" type="462c0819:PsiDirectoryNode" />
               <item name="com.epam.library" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="books" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Library" type="b2602c69:ProjectViewProjectNode" />
               <item name="Library" type="462c0819:PsiDirectoryNode" />
               <item name="com.epam.library" type="462c0819:PsiDirectoryNode" />
               <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -303,7 +292,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100067000" />
+    <option name="totallyTimeSpent" value="101197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -659,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2460">
-          <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="220" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com.epam.library/elements/notices/TypeNotice.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -677,20 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="77" column="59" lean-forward="true" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.epam.library/Controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -714,10 +682,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/com.epam.library/styles/main/left-menu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1899">
+          <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="220" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.epam.library/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.epam.library/Controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/com.epam.library/View.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="251" column="16" selection-start-line="251" selection-start-column="16" selection-end-line="251" selection-end-column="16" />
+        <state relative-caret-position="509">
+          <caret line="61" column="43" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="43" />
           <folding>
             <element signature="e#2207#2453#0" />
             <element signature="e#2505#3011#0" />
@@ -744,8 +733,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/com.epam.library/Model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="94" column="62" lean-forward="true" selection-start-line="94" selection-start-column="62" selection-end-line="94" selection-end-column="62" />
+        <state relative-caret-position="356">
+          <caret line="120" column="73" lean-forward="true" selection-start-line="120" selection-start-column="73" selection-end-line="120" selection-end-column="73" />
         </state>
       </provider>
     </entry>

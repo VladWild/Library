@@ -33,8 +33,9 @@ function View(model, controller) {
             that.model.onShowClickStar.subscribe(function (id, stars) {
                 that.showClickStar(id, stars);
             });
-            that.model.onClickPopularBooks.subscribe(function (books) {
+            that.model.onClickPopularBooks.subscribe(function (books, notices) {
                 that.showBooks(books);
+                that.showNotices(notices);
             });
             that.model.onClickAddBook.subscribe(function () {
                 that.showAddBook();
@@ -54,11 +55,13 @@ function View(model, controller) {
             that.model.onClickButtonSaveTags.subscribe(function () {
                 that.removeModalWindowWithBook();
             });
-            that.model.onClickBestList.subscribe(function (books) {
+            that.model.onClickBestList.subscribe(function (books, notices) {
                 that.showBooks(books);
+                that.showNotices(notices);
             });
-            that.model.onClickClassicNovels.subscribe(function (books) {
+            that.model.onClickClassicNovels.subscribe(function (books, notices) {
                 that.showBooks(books);
+                that.showNotices(notices);
             })
         }
         /*добавление событий элементам*/
