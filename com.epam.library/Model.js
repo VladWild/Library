@@ -55,8 +55,16 @@ Model.prototype = {
         this.onSearcher.notify(books);
     },
     upDateStars: function (id, stars) {
+        let oddStars = this.books[id].stars;
         this.books[id].stars = stars;
-        this.onClickStar.notify(id, stars);
+        if (oddStars !== stars){
+            this.methods.updateTime(this.notices);
+            this.notices.unshift(new Notice('You changed the book rating of "'
+                + this.books[id].title + '" from '
+                + oddStars + ' to ' + this.books[id].stars,
+                new Date(), 0));
+        }
+        this.onClickStar.notify(id, stars, this.notices);
     },
     highlightStars: function (id, stars) {
         let currentStars = this.books

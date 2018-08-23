@@ -20,9 +20,10 @@ function View(model, controller) {
             that.model.onSearcher.subscribe(function (books) {
                 that.showBooks(books);
             });
-            that.model.onClickStar.subscribe(function (id, stars) {
+            that.model.onClickStar.subscribe(function (id, stars, notices) {
                 that.upDateStars(id, stars);
                 that.highlightStars(id, stars);
+                that.showNotices(notices);
             });
             that.model.onHighlightStars.subscribe(function (id, stars, currentStars) {
                 that.highlightStars(id, stars, currentStars);
