@@ -11,6 +11,7 @@ function View(model, controller) {
     this.info = document.getElementById('info');                    //6) модальное окно - task6
     this.bestList = document.getElementById('best-of-list');        //6) Best of List - task6
     this.classicNovels = document.getElementById('classic-novels'); //6) Classic Novels - task6
+    this.notices = document.getElementById('notices');              //7) Notices history - task7
 
     this.init = function () {
         let that = this;
@@ -19,9 +20,10 @@ function View(model, controller) {
             that.model.onSearcher.subscribe(function (books) {
                 that.showBooks(books);
             });
-            that.model.onClickStar.subscribe(function (id, stars) {
+            that.model.onClickStar.subscribe(function (id, stars, notices) {
                 that.upDateStars(id, stars);
                 that.highlightStars(id, stars);
+                that.showNotices(notices);
             });
             that.model.onHighlightStars.subscribe(function (id, stars, currentStars) {
                 that.highlightStars(id, stars, currentStars);
@@ -32,8 +34,9 @@ function View(model, controller) {
             that.model.onShowClickStar.subscribe(function (id, stars) {
                 that.showClickStar(id, stars);
             });
-            that.model.onClickPopularBooks.subscribe(function (books) {
+            that.model.onClickPopularBooks.subscribe(function (books, notices) {
                 that.showBooks(books);
+                that.showNotices(notices);
             });
             that.model.onClickAddBook.subscribe(function () {
                 that.showAddBook();
@@ -41,10 +44,11 @@ function View(model, controller) {
             that.model.onClickSaveBook.subscribe(function () {
                 that.showSaveBook();
             });
-            that.model.onClickSaveBook.subscribe(function (books) {
+            that.model.onClickSaveBook.subscribe(function (books, notices) {
                 if (that.allBooks.getAttribute('class') === 'bg shadow') {
                     that.showBooks(books);
                 }
+                that.showNotices(notices);
             });
             that.model.onClickImageBook.subscribe(function (book) {
                 that.showModelWindowWithBook(book);
@@ -52,11 +56,13 @@ function View(model, controller) {
             that.model.onClickButtonSaveTags.subscribe(function () {
                 that.removeModalWindowWithBook();
             });
-            that.model.onClickBestList.subscribe(function (books) {
+            that.model.onClickBestList.subscribe(function (books, notices) {
                 that.showBooks(books);
+                that.showNotices(notices);
             });
-            that.model.onClickClassicNovels.subscribe(function (books) {
+            that.model.onClickClassicNovels.subscribe(function (books, notices) {
                 that.showBooks(books);
+                that.showNotices(notices);
             })
         }
         /*добавление событий элементам*/
@@ -239,6 +245,17 @@ View.prototype = {
     },
     removeModalWindowWithBook: function () {
         this.info.innerHTML = '';
+    },
+    showNotices: function (notices) {
+        function getFormatTime(time) {
+            return time === 0 ? 'only just' :
+                Math.floor(Math.floor(time / 1000) / 60) % 60 + ' min ' +
+                Math.floor(time / 1000) % 60 + ' sec';
+        }
+        this.notices.innerHTML = '';
+        notices.forEach(notice =>
+            this.notices.innerHTML += Tags.getNotice(notice.text,
+                getFormatTime(notice.timeDifference)));
     }
 };
 

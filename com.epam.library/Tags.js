@@ -74,4 +74,16 @@ class Tags {
 
 
     }
+
+    static getNotice(text, time){
+        return '<div class="notification">\n' +
+            '        <i class="fa fa-clock-o" aria-hidden="true"></i>\n' +
+            '        <span class="description">\n' +
+            '            <div>\n' +
+            '                <span class="info">' + text + '</span>\n' +
+            '            </div>\n' +
+            '            <span class="time">' + time + '</span>\n' +
+            '        </span>\n' +
+            '    </div>';
+    }
 }

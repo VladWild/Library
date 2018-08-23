@@ -201,7 +201,7 @@
 
 /*notice*/
 
-#left-menu .notice{
+#left-menu #notices{
     display: inline-block;
     justify-content: flex-start;
     align-items: center;
@@ -212,7 +212,7 @@
     font-size: 10pt;
 }
 
-#left-menu .notice > .notification{
+#left-menu #notices > .notification{
     display: flex;
     justify-content: left;
     align-items: flex-start;

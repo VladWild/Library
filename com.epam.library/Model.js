@@ -1,6 +1,7 @@
 function Model() {
     /*данные модели*/
-    this.books = [];
+    this.books = [];        //массив книг
+    this.notices = [];      //массив уведомлений
 
     /*наблюдатели элементов*/
     this.onSearcher = new EventEmitter();               /*поиск*/
@@ -54,8 +55,16 @@ Model.prototype = {
         this.onSearcher.notify(books);
     },
     upDateStars: function (id, stars) {
+        let oddStars = this.books[id].stars;
         this.books[id].stars = stars;
-        this.onClickStar.notify(id, stars);
+        if (oddStars !== stars){
+            this.methods.updateTime(this.notices);
+            this.notices.unshift(new Notice('You changed the book rating of "'
+                + this.books[id].title + '" from '
+                + oddStars + ' to ' + this.books[id].stars,
+                new Date(), 0));
+        }
+        this.onClickStar.notify(id, stars, this.notices);
     },
     highlightStars: function (id, stars) {
         let currentStars = this.books
@@ -76,7 +85,10 @@ Model.prototype = {
         let books = this.filters.search(this.books, str);
         let popularBooks = this.filters.popular(books);
         this.methods.changePosition(popularBooks);
-        this.onClickPopularBooks.notify(popularBooks);
+        this.methods.updateTime(this.notices);
+        this.notices.unshift(new Notice('You click filter popular books',
+            new Date(), 0));
+        this.onClickPopularBooks.notify(popularBooks, this.notices);
     },
     addBook: function () {
         this.onClickAddBook.notify();
@@ -86,8 +98,12 @@ Model.prototype = {
         let position = String(this.books.length);
         let image = 'resources/books/nocover.jpg';
         let stars = '0';
-        this.books.push(new Book(id, position, title, author, image, stars));
-        this.onClickSaveBook.notify(this.books);
+        let book = new Book(id, position, title, author, image, stars);
+        this.books.push(book);
+        this.methods.updateTime(this.notices);
+        this.notices.unshift(new Notice('You added book "' + book.title +
+            '" by ' + book.author, new Date(), 0));
+        this.onClickSaveBook.notify(this.books, this.notices);
     },
     showModelWindowWithBook: function (id) {
         this.onClickImageBook.notify(this.books[id]);
@@ -100,13 +116,19 @@ Model.prototype = {
         let books = this.filters.search(this.books, str);
         let bestBooks = this.filters.best(books);
         this.methods.changePosition(bestBooks);
-        this.onClickBestList.notify(bestBooks);
+        this.methods.updateTime(this.notices);
+        this.notices.unshift(new Notice('You click filter best of list books',
+            new Date(), 0));
+        this.onClickBestList.notify(bestBooks, this.notices);
     },
     novels: function (str) {
         let books = this.filters.search(this.books, str);
         let novelBooks = this.filters.novels(books);
         this.methods.changePosition(novelBooks);
-        this.onClickClassicNovels.notify(novelBooks);
+        this.methods.updateTime(this.notices);
+        this.notices.unshift(new Notice('You click classic novels books',
+            new Date(), 0));
+        this.onClickClassicNovels.notify(novelBooks, this.notices);
     }
 };
 
@@ -132,6 +154,13 @@ Model.prototype.methods = {
     changePosition: function (books) {
         for (let i = 0; i < books.length; i++){
             books[i].position = i;
+        }
+    },
+    updateTime: function (notices) {
+        let now = new Date();
+        for (let i = 0; i < notices.length; i++){
+            notices[i].timeDifference = now.getTime() -
+                notices[i].time;
         }
     }
 };
