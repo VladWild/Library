@@ -11,6 +11,7 @@ function View(model, controller) {
     this.info = document.getElementById('info');                    //6) модальное окно - task6
     this.bestList = document.getElementById('best-of-list');        //6) Best of List - task6
     this.classicNovels = document.getElementById('classic-novels'); //6) Classic Novels - task6
+    this.notices = document.getElementById('notices');              //7) Notices history - task7
 
     this.init = function () {
         let that = this;
@@ -46,6 +47,9 @@ function View(model, controller) {
                     that.showBooks(books);
                 }
             });
+            /*that.model.onClickSaveBook.subscribe(function (books, id) {
+                that.showNoticeAddBook(books[id]);
+            });*/
             that.model.onClickImageBook.subscribe(function (book) {
                 that.showModelWindowWithBook(book);
             });
@@ -239,7 +243,10 @@ View.prototype = {
     },
     removeModalWindowWithBook: function () {
         this.info.innerHTML = '';
-    }
+    },
+    /*showNoticeAddBook: function (book) {
+        this.notices.innerHTML += Tags.getNoticeAddBook(book);
+    }*/
 };
 
 /*внутренние методы*/

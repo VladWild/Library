@@ -1,6 +1,7 @@
 function Model() {
     /*данные модели*/
-    this.books = [];
+    this.books = [];        //массив книг
+    this.notices = [];      //массив уведомлений
 
     /*наблюдатели элементов*/
     this.onSearcher = new EventEmitter();               /*поиск*/
@@ -87,7 +88,8 @@ Model.prototype = {
         let image = 'resources/books/nocover.jpg';
         let stars = '0';
         this.books.push(new Book(id, position, title, author, image, stars));
-        this.onClickSaveBook.notify(this.books);
+        this.notices.push(new Notice(TypeNotice.ADD, dscdscdsc));
+        this.onClickSaveBook.notify(this.books, id);
     },
     showModelWindowWithBook: function (id) {
         this.onClickImageBook.notify(this.books[id]);
