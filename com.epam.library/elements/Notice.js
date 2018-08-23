@@ -1,5 +1,4 @@
-function Notice(type, text, time, timeDifference) {
-    this.type = type;
+function Notice(text, time, timeDifference) {
     this.text = text;
     this.time = time;
     this.timeDifference = timeDifference;

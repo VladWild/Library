@@ -1,8 +1,0 @@
-const TypeNotice = {
-    ADD: 'ADD',
-    FILTER_ALL: 'FILTER_ALL',
-    FILTER_POPULAR: 'FILTER_POPULAR',
-    FILTER_BEST: 'FILTER_BEST',
-    FILTER_NOVEL: 'FILTER_NOVEL',
-    STARS: 'STARS'
-};

@@ -42,14 +42,12 @@ function View(model, controller) {
             that.model.onClickSaveBook.subscribe(function () {
                 that.showSaveBook();
             });
-            that.model.onClickSaveBook.subscribe(function (books) {
+            that.model.onClickSaveBook.subscribe(function (books, notices) {
                 if (that.allBooks.getAttribute('class') === 'bg shadow') {
                     that.showBooks(books);
                 }
+                that.showNotices(notices);
             });
-            /*that.model.onClickSaveBook.subscribe(function (books, id) {
-                that.showNoticeAddBook(books[id]);
-            });*/
             that.model.onClickImageBook.subscribe(function (book) {
                 that.showModelWindowWithBook(book);
             });
@@ -244,9 +242,17 @@ View.prototype = {
     removeModalWindowWithBook: function () {
         this.info.innerHTML = '';
     },
-    /*showNoticeAddBook: function (book) {
-        this.notices.innerHTML += Tags.getNoticeAddBook(book);
-    }*/
+    showNotices: function (notices) {
+        function getFormatTime(time) {
+            return time === 0 ? 'only just' :
+                Math.floor(Math.floor(time / 1000) / 60) % 60 + ' min ' +
+                Math.floor(time / 1000) % 60 + ' sec';
+        }
+        this.notices.innerHTML = '';
+        notices.forEach(notice =>
+            this.notices.innerHTML += Tags.getNotice(notice.text,
+                getFormatTime(notice.timeDifference)));
+    }
 };
 
 /*внутренние методы*/

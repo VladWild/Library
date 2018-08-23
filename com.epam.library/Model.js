@@ -87,9 +87,12 @@ Model.prototype = {
         let position = String(this.books.length);
         let image = 'resources/books/nocover.jpg';
         let stars = '0';
-        this.books.push(new Book(id, position, title, author, image, stars));
-        this.notices.push(new Notice(TypeNotice.ADD, dscdscdsc));
-        this.onClickSaveBook.notify(this.books, id);
+        let book = new Book(id, position, title, author, image, stars);
+        this.books.push(book);
+        this.methods.updateTime(this.notices);
+        this.notices.unshift(new Notice('You added book "' + book.title +
+            '" by ' + book.author, new Date(), 0));
+        this.onClickSaveBook.notify(this.books, this.notices);
     },
     showModelWindowWithBook: function (id) {
         this.onClickImageBook.notify(this.books[id]);
@@ -134,6 +137,13 @@ Model.prototype.methods = {
     changePosition: function (books) {
         for (let i = 0; i < books.length; i++){
             books[i].position = i;
+        }
+    },
+    updateTime: function (notices) {
+        let now = new Date();
+        for (let i = 0; i < notices.length; i++){
+            notices[i].timeDifference = now.getTime() -
+                notices[i].time;
         }
     }
 };
