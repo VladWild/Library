@@ -25,3 +25,48 @@
 #footer .button:active{
     background: rgba(21, 164, 250, 0.53);
 }
+
+#footer > #callout{
+    position: absolute;
+    right: 1%;
+    bottom: 7%;
+/*    animation-fill-mode: forwards;
+    animation-name: vanishing;
+    animation-duration: 2000ms;*/
+}
+
+#footer > #callout > .rectangle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    background: #1f2637;
+    border-radius: 20px;
+    color: #b7c1dc;
+}
+
+#footer > #callout > .rectangle > span{
+    margin: 16px;
+    font-size: 10pt;
+}
+
+#footer > #callout > i{
+    position: absolute;
+    left: 120px;
+    top: 34px;
+    font-size: 30pt;
+    color: #1f2637;
+}
+
+/*@keyframes vanishing {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}*/
+
+
+
