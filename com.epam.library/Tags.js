@@ -86,4 +86,14 @@ class Tags {
             '        </span>\n' +
             '    </div>';
     }
+
+    static getNoticeCallout(text){
+        return '<div class="rectangle">\n' +
+            '                <span id="text-callout">\n' +
+            '                    ' + text + '\n' +
+            '                </span>\n' +
+            '            </div>\n' +
+            '            <i class="fa fa-caret-down" aria-hidden="true"></i>'
+    }
 }
+

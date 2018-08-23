@@ -12,6 +12,7 @@ function View(model, controller) {
     this.bestList = document.getElementById('best-of-list');        //6) Best of List - task6
     this.classicNovels = document.getElementById('classic-novels'); //6) Classic Novels - task6
     this.notices = document.getElementById('notices');              //7) Notices history - task7
+    this.callout = document.getElementById('callout');              //5) весь callout - task5
 
     this.init = function () {
         let that = this;
@@ -24,6 +25,7 @@ function View(model, controller) {
                 that.upDateStars(id, stars);
                 that.highlightStars(id, stars);
                 that.showNotices(notices);
+                that.showNoticeCallout(notices[0]);
             });
             that.model.onHighlightStars.subscribe(function (id, stars, currentStars) {
                 that.highlightStars(id, stars, currentStars);
@@ -37,6 +39,7 @@ function View(model, controller) {
             that.model.onClickPopularBooks.subscribe(function (books, notices) {
                 that.showBooks(books);
                 that.showNotices(notices);
+                that.showNoticeCallout(notices[0]);
             });
             that.model.onClickAddBook.subscribe(function () {
                 that.showAddBook();
@@ -49,6 +52,7 @@ function View(model, controller) {
                     that.showBooks(books);
                 }
                 that.showNotices(notices);
+                that.showNoticeCallout(notices[0]);
             });
             that.model.onClickImageBook.subscribe(function (book) {
                 that.showModelWindowWithBook(book);
@@ -59,10 +63,12 @@ function View(model, controller) {
             that.model.onClickBestList.subscribe(function (books, notices) {
                 that.showBooks(books);
                 that.showNotices(notices);
+                that.showNoticeCallout(notices[0]);
             });
             that.model.onClickClassicNovels.subscribe(function (books, notices) {
                 that.showBooks(books);
                 that.showNotices(notices);
+                that.showNoticeCallout(notices[0]);
             })
         }
         /*добавление событий элементам*/
@@ -256,6 +262,9 @@ View.prototype = {
         notices.forEach(notice =>
             this.notices.innerHTML += Tags.getNotice(notice.text,
                 getFormatTime(notice.timeDifference)));
+    },
+    showNoticeCallout: function (notice) {
+        this.callout.innerHTML = Tags.getNoticeCallout(notice.text);
     }
 };
 
