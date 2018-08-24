@@ -76,15 +76,15 @@ class Tags {
     }
 
     static getNotice(text, time){
-        return '<div class="notification">\n' +
-            '        <i class="fa fa-clock-o" aria-hidden="true"></i>\n' +
-            '        <span class="description">\n' +
-            '            <div>\n' +
-            '                <span class="info">' + text + '</span>\n' +
-            '            </div>\n' +
-            '            <span class="time">' + time + '</span>\n' +
-            '        </span>\n' +
-            '    </div>';
+        return `<div class="notification">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <span class="description">
+                        <div>
+                            <span class="info">${text}</span>
+                        </div>
+                        <span class="time">${time}</span>
+                    </span>
+                </div>`;
     }
 
     static getNoticeCallout(text){

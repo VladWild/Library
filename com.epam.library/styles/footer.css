@@ -30,9 +30,6 @@
     position: absolute;
     right: 1%;
     bottom: 7%;
-/*    animation-fill-mode: forwards;
-    animation-name: vanishing;
-    animation-duration: 2000ms;*/
 }
 
 #footer > #callout > .rectangle{
@@ -58,15 +55,4 @@
     font-size: 30pt;
     color: #1f2637;
 }
-
-/*@keyframes vanishing {
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}*/
-
-
 

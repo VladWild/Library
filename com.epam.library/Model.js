@@ -139,7 +139,7 @@ Model.prototype.filters = {
                 book.author.indexOf(str) > -1);
     },
     popular: function (arr) {
-        return arr.filter(book => book.stars == 5);
+        return arr.filter(book => +book.stars === 5);
     },
     best: function (arr) {
         return arr.filter(book => book.best);
